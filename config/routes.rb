@@ -14,11 +14,11 @@ BlueButtonPortal::Application.routes.draw do
   #   resources :products
 
   # Sample resource route with options:
-  #   resources :products do
-  #     member do
-  #       get 'short'
-  #       post 'toggle'
-  #     end
+#     resources :bbp_pull_requests do
+#       member do
+#         post 'create'
+#       end
+#     end
   #
   #     collection do
   #       get 'sold'
@@ -48,7 +48,8 @@ BlueButtonPortal::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'welcome#index'
+   root :to => 'bbp_pull_requests#new'
+   resources :bbp_pull_requests
 
   # See how all your routes lay out with "rake routes"
 

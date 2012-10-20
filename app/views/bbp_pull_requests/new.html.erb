@@ -1,0 +1,7 @@
+<h1>Welcome to the blue button portal!</h1>
+
+<%= form_for(@bbp_pull_request, :remote => true) do |f| %>
+   <%= f.label :name, "Enter your email id" %>
+   <%= f.text_field :email %>
+   <%= f.submit "Send mail" %>
+<% end %>
