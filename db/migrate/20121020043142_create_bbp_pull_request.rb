@@ -1,0 +1,11 @@
+class CreateBbpPullRequest < ActiveRecord::Migration
+  def up
+    create_table :bbp_pull_requests do |request|
+      request.string :name
+    end
+  end
+
+  def down
+    drop table bbp_pull_requests
+  end
+end

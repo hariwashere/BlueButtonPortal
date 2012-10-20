@@ -1,1 +1,7 @@
 <h1>Welcome to the blue button portal!</h1>
+
+<%= form_for(@welcome, :remote => true) do |f| %>
+   <%= f.label :name, "Enter your email id" %>
+   <%= f.text_field :email %>
+   <%= f.submit "Send mail" %>
+<% end %>
