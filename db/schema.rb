@@ -11,11 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121104154158) do
+ActiveRecord::Schema.define(:version => 20121105045559) do
 
   create_table "bbp_pull_requests", :force => true do |t|
-    t.string "email"
-    t.string "uuid"
+    t.string   "email"
+    t.string   "uuid"
+    t.datetime "created_time"
   end
 
 end
