@@ -1,1 +1,15 @@
-This page will have a form
+<body>
+<h2>Please enter the following details</h2>
+<%= form_for(@bbp_pull, :remote => true) do |f| %>
+   <%= f.label :first_name, "First name" %>
+   <%= f.text_field :first_name %>
+    <br/>
+       <%= f.label :last_name, "Last name" %>
+   <%= f.text_field :last_name %>
+    <br/>
+       <%= f.label :destination_email, "Destination email id" %>
+   <%= f.text_field :destination_email %>
+    <br/>
+   <%= f.submit "Send my information" %>
+<% end %>
+</body>
