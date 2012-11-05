@@ -51,6 +51,9 @@ BlueButtonPortal::Application.routes.draw do
    root :to => 'bbp_pull_requests#new'
    resources :bbp_pull_requests
 
+   root :to => 'bbp_pulls#new'
+   resources :bbp_pulls
+
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
