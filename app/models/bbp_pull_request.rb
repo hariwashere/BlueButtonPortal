@@ -11,6 +11,6 @@ class BbpPullRequest < ActiveRecord::Base
   end
 
   def alive?
-    ((DateTime.now - created_time.to_datetime) * 1.days) < 30.seconds
+    ((DateTime.now - created_time.to_datetime) * 1.days) < 30.minutes
   end
 end

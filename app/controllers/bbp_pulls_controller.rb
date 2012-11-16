@@ -6,6 +6,7 @@ class BbpPullsController < ApplicationController
       render :error
     end
     @bbp_pull = BbpPull.new
+    @ehr_sites = EhrSite.sites
   end
 
   def create
