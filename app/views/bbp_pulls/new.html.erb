@@ -7,8 +7,12 @@
        <%= f.label :last_name, "Last name" %>
    <%= f.text_field :last_name %>
     <br/>
-       <%= f.label :destination_email, "EHR source" %>
-    <%= collection_select :bbp_pull, :destination_email, @ehr_sites, :email, :name %>
+       <%= f.label :source_email, "EHR source" %>
+    <%= collection_select :bbp_pull, :source_email, @ehr_sites, :email, :name %>
+    <br/>
+     <br/>
+       <%= f.label :destination_email, "Destination Email" %>
+   <%= f.text_field :destination_email %>
     <br/>
     <%= f.check_box :use_for_research%>
     <%= f.label :use_for_research, "Check this box to allow the deidentified data to be used for research purpose" %>

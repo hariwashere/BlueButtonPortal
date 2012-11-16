@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121116050944) do
+ActiveRecord::Schema.define(:version => 20121116062933) do
 
   create_table "bbp_pull_requests", :force => true do |t|
     t.string   "email"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20121116050944) do
     t.string  "last_name"
     t.string  "destination_email"
     t.boolean "use_for_research"
+    t.string  "source_email"
   end
 
 end

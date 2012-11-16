@@ -1,3 +1,3 @@
 class BbpPull < ActiveRecord::Base
-attr_accessible :first_name, :last_name, :destination_email, :use_for_research
+attr_accessible :first_name, :last_name, :destination_email, :use_for_research, :source_email
 end

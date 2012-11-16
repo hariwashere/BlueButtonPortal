@@ -8,7 +8,7 @@ class UserMailer < ActionMailer::Base
   def ehr_pull_request(patient_detail)
     @patient_detail = patient_detail
     attachments['patient_detail.xml'] = create_attachment(patient_detail)
-    mail(:to => @patient_detail.destination_email, :subject => "Patient details pull request")
+    mail(:to => @patient_detail.source_email, :subject => "Patient details pull request")
   end
 
   def create_attachment(patient_detail)
