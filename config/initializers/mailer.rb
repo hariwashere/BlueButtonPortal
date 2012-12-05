@@ -16,9 +16,7 @@ ActionMailer::Base.smtp_settings = {
 :enable_starttls_auto => true,
 :address => 'mail.i3l.gatech.edu',
 :port => 25,
-#:domain => "direct.i3l.gatech.edu",
-:user_name => 'shari',
-:password => 'shrihari',
+:user_name => 'bbp',
+:password => 'bbp.12',
 :authentication => :plain
-#:openssl_verify_mode => :none
 }

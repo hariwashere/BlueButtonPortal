@@ -8,8 +8,8 @@ class EhrSite
   
   def EhrSite.sites
     return [
-      EhrSite.new("Vista EHR", "shari@direct.i3l.gatech.edu"),
+      EhrSite.new("Vista EHR", "gtvista@direct.i3l.gatech.edu"),
       EhrSite.new("Georgia EHR", "blah1"),
-      EhrSite.new("Manually processed EHR", "blah2")]
+      EhrSite.new("Manually processed EHR", "storage@direct.i3l.gatech.edu")]
   end
 end

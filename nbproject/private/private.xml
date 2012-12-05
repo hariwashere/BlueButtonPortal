@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/models/bbp_pull.rb</file>
         <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/mailers/user_mailer.rb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/controllers/bbp_pull_requests_controller.rb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/models/bbp_pull_request.rb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/controllers/bbp_pulls_controller.rb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/views/layouts/application.html.erb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/views/user_mailer/bbp_pull_response.html.erb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/config/initializers/mailer.rb</file>
-        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/config/environments/development.rb</file>
+        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/views/user_mailer/ehr_pull_request.html.erb</file>
+        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/app/views/bbp_pulls/new.html.erb</file>
+        <file>file:/C:/Users/ET/Documents/NetBeansProjects/BlueButtonPortal/config/database.yml</file>
     </open-files>
 </project-private>
