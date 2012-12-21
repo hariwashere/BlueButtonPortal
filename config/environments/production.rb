@@ -53,6 +53,7 @@ BlueButtonPortal::Application.configure do
 
   # Enable threaded mode
   # config.threadsafe!
+  config.assets.compile = true
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found)
@@ -65,3 +66,5 @@ BlueButtonPortal::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 end
+
+ENV['APPLICATION_URL'] = "bbp.i3l.gatech.edu"

@@ -2,6 +2,7 @@ class UserMailer < ActionMailer::Base
   default from: "bbp@direct.i3l.gatech.edu"
   def bbp_pull_response(bbp_pull_request)
     @uuid = bbp_pull_request.uuid
+    @url = ENV['APPLICATION_URL']
     mail(:to => bbp_pull_request.email, :subject => "Blue button pull request")
   end
 
