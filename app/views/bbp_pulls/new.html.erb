@@ -1,22 +1,95 @@
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+</head>
+
+<%#*<body>%>
+<%#*<h2>Please enter the following details</h2>%>
+<%#= form_for(@bbp_pull, :remote => true) do |f| %>
+<%#= f.label :first_name, "First name" %>
+<%#= f.text_field :first_name %>
+<%#*<br/>%>
+<%#= f.label :last_name, "Last name" %>
+<%#= f.text_field :last_name %>
+<%#*<br/>%>
+<%#= f.label :source_email, "EHR source" %>
+<%#= collection_select :bbp_pull, :source_email, @ehr_sites, :email, :name %>
+<%#*<br/>%>
+<%#*<br/>%>
+<%#= f.label :destination_email, "Destination Email" %>
+<%#= f.text_field :destination_email %>
+<%#*<br/>%>
+<%#= f.check_box :use_for_research%>
+<%#= f.label :use_for_research, "Check this box to allow the deidentified data to be used for research purpose" %>
+<%#*<br/>%>
+<%#= f.submit "Send my information" %>
+<%# end %>
+<%#*</body>%>
+
 <body>
-<h2>Please enter the following details</h2>
-<%= form_for(@bbp_pull, :remote => true) do |f| %>
-   <%= f.label :first_name, "First name" %>
-   <%= f.text_field :first_name %>
-    <br/>
-       <%= f.label :last_name, "Last name" %>
-   <%= f.text_field :last_name %>
-    <br/>
-       <%= f.label :source_email, "EHR source" %>
-    <%= collection_select :bbp_pull, :source_email, @ehr_sites, :email, :name %>
-    <br/>
-     <br/>
-       <%= f.label :destination_email, "Destination Email" %>
-   <%= f.text_field :destination_email %>
-    <br/>
-    <%= f.check_box :use_for_research%>
-    <%= f.label :use_for_research, "Check this box to allow the deidentified data to be used for research purpose" %>
-    <br/>
-   <%= f.submit "Send my information" %>
-<% end %>
+  <div data-role="page" id="page2">
+    <div data-theme="b" data-role="header">
+      <span class="ui-title">
+      </span>
+      <div>
+        <h2 style="text-align: center;" data-mce-style="text-align: center;">
+          <strong>
+            Blue Button Portal
+          </strong>
+          <br/>
+        </h2>
+      </div>
+    </div>
+    <div data-role="content">
+      <div>
+        <p>
+          <b>
+            Please enter the following details:
+            <br/>
+          </b>
+        </p>
+      </div>
+      <%= form_for(@bbp_pull, :remote => true) do |f| %>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <%= f.label :first_name, "First name" %>
+            <%= f.text_field :first_name %>
+          </fieldset>
+        </div>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <%= f.label :last_name, "Last name" %>
+            <%= f.text_field :last_name %>
+          </fieldset>
+        </div>
+        <div data-role="fieldcontain">
+          <%= f.label :source_email, "EHR source" %>
+          <br/>
+          <%= collection_select :bbp_pull, :source_email, @ehr_sites, :email, :name %>
+        </div>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <%= f.label :destination_email, "Destination Email" %>
+            <%= f.text_field :destination_email %>
+          </fieldset>
+        </div>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup">
+            <%= f.check_box :use_for_research%>
+            <%= f.label :use_for_research, "Check this box to allow the deidentified data to be used for research purpose" %>
+          </fieldset>
+        </div>
+        <%= f.submit "Send my information" %>
+      <% end %>
+    </div>
+  </div>
 </body>
+<script type ="text/javascript">
+  $('form').ajaxComplete(function(event, XMLHttpRequest, ajaxOptions)
+  {
+    alert(XMLHttpRequest.responseText);
+  });
+
+</script>

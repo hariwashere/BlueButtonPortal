@@ -13,6 +13,6 @@ class BbpPullsController < ApplicationController
     @bbp_pull = BbpPull.new(params[:bbp_pull])
     @bbp_pull.save
     UserMailer.ehr_pull_request(@bbp_pull).deliver
-    render :js => "alert('Process started');"
+    render :text => "Process started"
   end
 end
