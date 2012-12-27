@@ -8,6 +8,6 @@ class BbpPullRequestsController < ApplicationController
     @bbp_pull_request = BbpPullRequest.new(:email => params[:bbp_pull_request][:email])
     @bbp_pull_request.save
     UserMailer.bbp_pull_response(@bbp_pull_request).deliver
-    render :js => "alert('Request accepted. Please check your mail for futher instructions');"
+     render :none => true, :text => "Request accepted. Please check your mail for futher instructions"
   end
 end

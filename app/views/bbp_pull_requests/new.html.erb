@@ -1,12 +1,48 @@
+<!DOCTYPE html>
 <html>
-<body>
-<h1>Welcome to the blue button portal!</h1>
-<%= form_for(@bbp_pull_request, :remote => true) do |f| %>
-   <%= f.label :name, "Enter your email id" %>
-   <%= f.text_field :email %>
-   <%= f.submit "Send mail" %>
-<% end %>
-</body>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+    <link rel="stylesheet" href="<%= Rails.root + 'app/assets/stylesheets/bbp_pull_requests.css' %>" />
+<%#*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>%>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="<%= Rails.root + 'app/assets/javascripts/bbp_pull_requests.js' %>"></script>
+
+  </head>
+
+  <body>
+    <div data-role="page" id="page1">
+      <div data-theme="b" data-role="header">
+        <span class="ui-title">
+        </span>
+        <div>
+          <h2 style="text-align: center;" data-mce-style="text-align: center;">
+            <strong>
+              Welcome to the blue button portal!
+            </strong>
+            <br/>
+          </h2>
+        </div>
+      </div>
+      <div data-role="content">
+        <%= form_for(@bbp_pull_request, :remote => true) do |f| %>
+          <div data-role="fieldcontain">
+            <fieldset data-role="controlgroup">
+              <%= f.label :name, "Enter your email id" %>
+              <%= f.text_field :email %>
+            </fieldset>
+          </div>
+          <%= f.submit "Send mail" %>
+        <% end %>
+      </div>
+    </div>
+    <script type ="text/javascript">
+      $('form').ajaxComplete(function(event, XMLHttpRequest, ajaxOptions)
+      {
+        alert(XMLHttpRequest.responseText);
+      });
+
+    </script>
+  </body>
 </html>
-
-
